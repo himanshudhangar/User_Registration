@@ -4,7 +4,7 @@ package java_registrationTest;
 	import org.junit.runner.RunWith;
 	import org.junit.runners.Parameterized;
 
-import java_registration1.User_Registration;
+import java_registration1.UserRegistration;
 
 import java.util.Arrays;
 	import java.util.Collection;
@@ -14,7 +14,7 @@ import java.util.Arrays;
 	public class User_Registration_parameterized {
 	    private final String emailId;
 	    private final boolean expectedResult;
-	    User_Registration validate = new User_Registration();
+	    UserRegistration validate = new UserRegistration();
 
 	    public User_Registration_parameterized(String emailId, boolean result) {
 	        this.emailId = emailId;

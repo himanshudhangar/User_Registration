@@ -6,15 +6,16 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java_registration1.InvalidUserInputExp;
+import java_registration1.UserRegistrationInterface;
 
-public class User_ValidTest {
-	User_ValidTest userRegistration = new User_ValidTest();
+public class UserRegistrationTest {
+    UserRegistrationInterface userRegistration = new UserRegistration();
     @Test
     public void givenFirstName_whenProper_ShouldReturnTrue() {
         try {
             boolean result = userRegistration.firstNameValidate.userEntries("Ritesh");
             Assert.assertTrue(result);
-        } catch (User_ValidTest e) {
+        } catch (InvalidUserInputExp e) {
             System.out.println(e);
         }
     }
@@ -24,7 +25,7 @@ public class User_ValidTest {
         try {
             boolean result = userRegistration.firstNameValidate.userEntries("Rites");
             Assert.assertFalse(result);
-        } catch (User_ValidTest e) {
+        } catch (InvalidUserInputExp e) {
             System.out.println(e);
         }
     }
